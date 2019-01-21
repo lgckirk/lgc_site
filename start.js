@@ -1,13 +1,13 @@
-(function() {
-
 import slider from './slider/slider.js';
 import home from './homeController.js';
+
+(function() {
 
 const routes = ['home', 'projects', 'contact'];
 
 angular.module('lgcSite', ['ngAnimate', 'ngRoute'])
+    .value('siteRoutes', routes)
     .controller('homeController', home)
-    .value('routes', routes)
     .component('slider', slider);
 
 angular.module('lgcSite')

@@ -3,7 +3,7 @@
  */
 export default
 class {
-    constructor($scope, $route, $location, $routes) {
+    constructor($scope, siteRoutes, $location) {
         /**
          * These 2 flags control the rendering of
          * 1. The home page window (Picture | Description)
@@ -18,13 +18,13 @@ class {
         };
 
         // must inject $route for these events to be available
-        $scope.$on('$routeChangeStart', (event, next, current) => {
-            if ($location.path() === '/home') {
-                this.showContent = false;
-                this.showWindows = true;
-            } else {
-                this.showWindows = false;
-            }
-        });
+        // $scope.$on('$routeChangeStart', (event, next, current) => {
+        //     if ($location.path() === '/home') {
+        //         this.showContent = false;
+        //         this.showWindows = true;
+        //     } else {
+        //         this.showWindows = false;
+        //     }
+        // });
     }
 }
