@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Li, Gaochang</title>
+    <link rel="icon" href="./asset/favicon.png">
+    <link rel="stylesheet" href="./lib/bootstrap.3.3.7.css">
+    <link type="text/css" rel="stylesheet" href="./home.css">
+    <link type="text/css" rel="stylesheet" href="./slider/slider.css">
+    
+    <script src="./lib/angular.min.js"></script>
+    <script src="./lib/ng-animate.1.6.9.js"></script>
+    <script src="./lib/ng-route.1.6.9.js"></script>
+    <script type="module" src="./homeController.js"></script>
+    <script type="module" src="./slider/slider.js"></script>
+    <script type="module" src="./start.js"></script>
+</head>
+
+<body ng-controller="homeController as ctrl">
+    <slider open="ctrl.showWindows" onClose="ctrl.onWindowShuts">
+        <slider-left>
+            <div class="home-picture"></div>
+        </slider-left>
+        <slider-right>
+            <div class="home-description">
+                <h3><b>
+                    Hi! My name is Gaochang Li, or Kirk, if you prefer. I am a computer science student at <a href="http://www.wisc.edu" target="_blank" alt="university of wisconsin-madison"> University of Wisconsin-Madison</a>. I love programming! Currently I'm focusing on front-end web development but I would like to be a full-stack developer in the future.
+                </b></h3>
+                <p>
+                    Having taken an introductory programming course in college at the second semester of my freshman year, I realized that software engineering is what I'm truely passionate about and declared computer science as my major afterwards.
+                </p>
+                <p>
+                    Besides college coursework, I spent a lot of time learning programming languages and technologies I am interested in. Within less than a year, I taught myself HTML, CSS, JavaScript, jQuery, Bootstrap, AJAX, Markdown, EJS, and Jsoup. I find a lot of pleasure in learning them and using them in my projects.</p>
+                <p>
+                    As a front end developer. I am capable of using Bootstrap to make responsive layout, familiar with DOM and BOM, and can write JavaScrtipt without jQuery. I can also do object oriented programming in Java and use Jsoup, a Java HTML parser, to implement web crawler.
+                </p>
+                <ul class="home-nav">
+                    <li><a href="#!home">Home</a></li>
+                    <li><a href="#!projects">Projects</a></li>
+                    <li><a href="https://lgckirk.github.io/" target="_blank" alt="my blog">Blog</a></li>
+                    <li><a href="#!contact" >Contact</a></li>
+                </ul>
+            </div>
+        </slider-right>
+    </slider>
+
+    <ng-view ng-show="ctrl.showContent"></ng-view>
+</body>
+</html>

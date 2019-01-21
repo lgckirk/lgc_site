@@ -1,0 +1,46 @@
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.home-picture {
+    width: 100%;
+    height: 100%;
+    background-image: url(../asset/portrait.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-description {
+    font-size: 1.6em;
+    padding: 5vh 10vh;
+}
+
+.home-description h3 {
+    line-height: 1.2em;
+    font-size: 1.2em;
+}
+
+.home-description p {
+    padding-top: 1vh;
+    font-size: 0.9em;
+    line-height: 1em;
+    color: rgb(118, 119, 119);
+}
+
+.home-nav {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.home-nav li {
+    display: block;
+    padding: 0 15px;
+}
