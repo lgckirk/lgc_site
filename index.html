@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="./lib/bootstrap.3.3.7.css">
     <link type="text/css" rel="stylesheet" href="./home.css">
     <link type="text/css" rel="stylesheet" href="./slider/slider.css">
-    
+    <link type="text/css" rel="stylesheet" href="./navbar/navbar.css">
+
     <script src="./lib/angular.min.js"></script>
     <script src="./lib/ng-animate.1.6.9.js"></script>
     <script src="./lib/ng-route.1.6.9.js"></script>
     <script type="module" src="./homeController.js"></script>
     <script type="module" src="./slider/slider.js"></script>
+    <script type="module" src="./navbar/navbar.js"></script>
     <script type="module" src="./start.js"></script>
 </head>
 
@@ -33,12 +35,7 @@
                 <p>
                     As a front end developer. I am capable of using Bootstrap to make responsive layout, familiar with DOM and BOM, and can write JavaScrtipt without jQuery. I can also do object oriented programming in Java and use Jsoup, a Java HTML parser, to implement web crawler.
                 </p>
-                <ul class="home-nav">
-                    <li><a href="#!home">Home</a></li>
-                    <li><a href="#!projects">Projects</a></li>
-                    <li><a href="https://lgckirk.github.io/" target="_blank" alt="my blog">Blog</a></li>
-                    <li><a href="#!contact" >Contact</a></li>
-                </ul>
+                <navbar class="home-navbar" items="ctrl.tabs"></navbar>
             </div>
         </slider-right>
     </slider>

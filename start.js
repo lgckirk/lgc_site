@@ -1,4 +1,5 @@
 import slider from './slider/slider.js';
+import navbar from './navbar/navbar.js';
 import home from './homeController.js';
 
 (function() {
@@ -6,9 +7,11 @@ import home from './homeController.js';
 const routes = ['home', 'projects', 'contact'];
 
 angular.module('lgcSite', ['ngAnimate', 'ngRoute'])
-    .value('siteRoutes', routes)
+    .constant('myBlogUrl', 'https://lgckirk.github.io/')
+    .constant('siteRoutes', routes)
     .controller('homeController', home)
-    .component('slider', slider);
+    .component('slider', slider)
+    .component('navbar', navbar);
 
 angular.module('lgcSite')
     .config(($routeProvider) => {

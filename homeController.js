@@ -3,7 +3,7 @@
  */
 export default
 class {
-    constructor($scope, siteRoutes, $location) {
+    constructor($scope, siteRoutes, myBlogUrl, $location) {
         /**
          * These 2 flags control the rendering of
          * 1. The home page window (Picture | Description)
@@ -16,6 +16,19 @@ class {
             this.showContent = true;
             $scope.$digest();
         };
+
+        // navigation tabs
+        this.tabs = siteRoutes.map((route) => {
+            return {
+                href: '#!' + route,
+                label: route.charAt(0).toUpperCase() + route.slice(1)
+            };
+        });
+        this.tabs.push({
+            href: myBlogUrl,
+            label: 'Blog',
+            openNewTab: true
+        });
 
         // must inject $route for these events to be available
         // $scope.$on('$routeChangeStart', (event, next, current) => {
