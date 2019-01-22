@@ -35,7 +35,7 @@
 
 .slider-left,
 .slider-right {
-    transition: all ease 0.5s;
+    transition: all ease 0.8s;
     position: absolute;
 }
 
@@ -49,14 +49,20 @@
     right: 0;
 }
 
-.slider-left.animation-slider-fold,
-.slider-right.animation-slider-fold {
+.slider-left.animation-slider-fold {
     left: -50%;
 }
 
+.slider-right.animation-slider-fold {
+    right: -50%;
+}
+
 @media only screen and (max-width: 930px) {
-    .slider-left.animation-slider-fold,
-    .slider-right.animation-slider-fold {
+    .slider-left.animation-slider-fold {
         left: -100%;
+    }
+
+    .slider-right.animation-slider-fold {
+        right: -100%;
     }
 }
