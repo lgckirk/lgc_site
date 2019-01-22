@@ -12,11 +12,6 @@ class {
         this.showWindows = true;
         this.showContent = false;
 
-        this.onWindowShuts = () => {
-            this.showContent = true;
-            $scope.$digest();
-        };
-
         // navigation tabs
         this.tabs = siteRoutes.map((route) => {
             return {
@@ -30,14 +25,15 @@ class {
             openNewTab: true
         });
 
-        // must inject $route for these events to be available
-        // $scope.$on('$routeChangeStart', (event, next, current) => {
-        //     if ($location.path() === '/home') {
-        //         this.showContent = false;
-        //         this.showWindows = true;
-        //     } else {
-        //         this.showWindows = false;
-        //     }
-        // });
+        // only show the windows on home page
+        $scope.$on('$routeChangeSuccess', () => {
+            if ($location.path() === '/home') {
+                if (!this.showWindows) {
+                    this.showWindows = true;
+                }
+            } else if (this.showWindows) {
+                this.showWindows = false;
+            }
+        });
     }
 }
