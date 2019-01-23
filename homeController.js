@@ -3,22 +3,12 @@
  */
 export default
 class {
-    constructor($scope, siteRoutes, myBlogUrl, $location) {
+    constructor($scope, getNavTabs, $location) {
         // flag for opening/closing the home page windows
         this.showWindows = true;
 
         // navigation tabs
-        this.tabs = siteRoutes.map((route) => {
-            return {
-                href: '#!' + route,
-                label: route.charAt(0).toUpperCase() + route.slice(1)
-            };
-        });
-        this.tabs.push({
-            href: myBlogUrl,
-            label: 'Blog',
-            openNewTab: true
-        });
+        this.tabs = getNavTabs();
 
         // only show the windows on home page
         $scope.$on('$routeChangeSuccess', () => {

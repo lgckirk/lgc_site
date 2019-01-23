@@ -23,6 +23,7 @@ class SliderController {
         if (typeof this.open !== 'boolean') {
             console.error('Slider [Component]: parameter "open" must be boolean.');
         }
+        this.showSlider = this.open;
     }
 
     $onChanges(change) {
@@ -49,14 +50,17 @@ class SliderController {
         this._wings.forEach((ele) => {
             this._animate.addClass(ele, 'animation-slider-fold')
                 .then(() => {
+                    // after animation, run callback and hide the slider
                     if (typeof this.onClose === 'function') {
                         this.onClose();
                     }
+                    this.showSlider = false;
                 });
         });
     }
 
     _show() {
+        this.showSlider = true;
         this._wings.forEach((ele) => {
             if (!angular.element(ele).hasClass('animation-slider-fold')) {
                 console.error('Slider [Component]: attempting to' +
