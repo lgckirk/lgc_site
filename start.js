@@ -2,6 +2,7 @@ import slider from './slider/slider.js';
 import navbar from './navbar/navbar.js';
 import home from './homeController.js';
 import contact from './contact/contact.js';
+import projects from './projects/projects.js';
 import navTabService from './navTabService/navTabService.js';
 
 (function() {
@@ -19,6 +20,7 @@ angular.module('lgcSite', ['ngAnimate', 'ngRoute'])
     .factory('getNavTabs', navTabService)
     .controller('homeController', home)
     .component('contact', contact)
+    .component('projects', projects)
     .component('slider', slider)
     .component('navbar', navbar);
 
