@@ -4,6 +4,20 @@ body {
     width: 100vw;
 }
 
+.home-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 90;
+}
+
+.home-slider * {
+    z-index: 100;
+}
+
 .home-picture {
     width: 100%;
     height: 100%;

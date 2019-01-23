@@ -18,7 +18,7 @@
 </head>
 
 <body ng-controller="homeController as ctrl">
-    <slider open="ctrl.showWindows">
+    <slider class="home-slider" open="ctrl.showWindows">
         <slider-left>
             <div class="home-picture"></div>
         </slider-left>
@@ -41,6 +41,6 @@
         </slider-right>
     </slider>
 
-    <ng-view ng-show="ctrl.showContent"></ng-view>
+    <ng-view class="home-content"></ng-view>
 </body>
 </html>

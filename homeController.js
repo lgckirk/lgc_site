@@ -4,13 +4,8 @@
 export default
 class {
     constructor($scope, siteRoutes, myBlogUrl, $location) {
-        /**
-         * These 2 flags control the rendering of
-         * 1. The home page window (Picture | Description)
-         * 2. The container of the actual content
-         */
+        // flag for opening/closing the home page windows
         this.showWindows = true;
-        this.showContent = false;
 
         // navigation tabs
         this.tabs = siteRoutes.map((route) => {
