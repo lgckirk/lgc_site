@@ -8,7 +8,7 @@ class {
         this.showWindows = true;
 
         // navigation tabs
-        this.tabs = getNavTabs();
+        this.tabs = getNavTabs(true);
 
         // only show the windows on home page
         $scope.$on('$routeChangeSuccess', () => {
