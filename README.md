@@ -15,3 +15,4 @@ This is main site of my personal portfolio, where I showcase my stuffs.
 * Remove bootstrap css as a dependency
 * WeChat QR code has expired, get a new one
 * Add Linkedin to one of the contacts
+* Update the project list's projects

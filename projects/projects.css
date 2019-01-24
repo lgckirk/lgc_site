@@ -13,3 +13,16 @@
 .projects-navbar {
     font-size: 15px;
 }
+
+.project-shelf {
+    display: block;
+    width: 50%;
+    max-height: 65%;
+    padding: 0;
+    margin-bottom: 30px;
+    overflow: auto;
+}
+
+.projects-shelf-item {
+    width: 100%;
+}
