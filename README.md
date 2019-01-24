@@ -12,3 +12,4 @@ This is main site of my personal portfolio, where I showcase my stuffs.
 
 * Routing needs a default page
 * Contact->WeChat and projects should have a popup
+* Remove bootstrap css as a dependency

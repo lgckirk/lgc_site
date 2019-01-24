@@ -15,7 +15,7 @@ import navTabService from './navTabService/navTabService.js';
  */
 const routes = ['home', 'projects', 'contact'];
 
-angular.module('lgcSite', ['ngAnimate', 'ngRoute'])
+angular.module('lgcSite', ['ngAnimate', 'ngRoute', 'ui.bootstrap'])
     .constant('siteRoutes', routes)
     .factory('getNavTabs', navTabService)
     .controller('homeController', home)
