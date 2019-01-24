@@ -26,3 +26,11 @@
 .projects-shelf-item {
     width: 100%;
 }
+
+.project-shelf-item-buttons {
+    margin-top: 10px;
+}
+
+.project-shelf-button-demo a {
+    color: white;
+}

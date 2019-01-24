@@ -8,7 +8,19 @@
         class="projects-shelf-item"
         ng-repeat="project in $ctrl.projects">
             <uib-accordion-heading>{{project.heading}}</uib-accordion-heading>
-            {{project.detail}}
+            {{project.description}}
+            <div class="project-shelf-item-buttons">
+                <button
+                class="btn btn-default btn-sm"
+                ng-if="project.srcUrl">
+                    <a href="{{project.srcUrl}}">View Source</a>
+                </button>
+                <button
+                class="btn btn-info btn-sm project-shelf-button-demo"
+                ng-if="project.demoUrl">
+                    <a href="{{project.demoUrl}}">View Demo</a>
+                </button>
+            </div>
         </div>
     </uib-accordion>
     <navbar class="projects-navbar" items="$ctrl.tabs"></navbar>

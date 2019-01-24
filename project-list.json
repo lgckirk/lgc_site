@@ -1,0 +1,44 @@
+{
+    "projectList": [
+        {
+            "heading": "JavaScript Game: 2048",
+            "description": "A game written in JavaScript, implemented based on the popular mobile game \"2048\", player can move the tiles and merge them if the 2 tiles have same number. The game stops when player get 1 tile with 2048 on it.",
+            "srcUrl": "./download/2048.zip",
+            "demoUrl": "./demo/ori/index.html"
+        },
+        {
+            "heading": "JavaScript Music Game",
+            "description": "This is a desktop game created using JS and Electron, a framework that allows programmers to use HTML, CSS, JS, and node.js to make desktop app. Players follow rhythm of the music and press key corresponding to direction of the arrow.",
+            "srcUrl": "./download/music_game.zip"
+        },
+        {
+            "heading": "WebSite: My AlterEgo",
+            "description": "A static website I made showing some of my AlterEgo.",
+            "srcUrl": "./download/altergo.zip",
+            "demoUrl": "./demo/altergo/main.html"
+        },
+        {
+            "heading": "Java Game: PantsOnFire",
+            "description": "This is a desktop game written in Java using Applet. A project for my Intro Java Class. Run it in cmd.",
+            "srcUrl": "./download/PantsOnFire.zip",
+            "demoUrl": "./download/PantsOnFire.jar"
+        },
+        {
+            "heading": "Java: My Favorite Places",
+            "description": "This Java Program can add, read, save, load information user entered about some locations and then use Google map to revise data, locate it, and display it on a website. Run it with cmd since it doen't have a GUI.",
+            "srcUrl": "./download/MyFavoritePlaces.zip",
+            "demoUrl": "./download/MyFavoritePlaces.jar"
+        },
+        {
+            "heading": "Java: MessageLoopEditor",
+            "description": "A loop that stores message. User can do operations like adding or removing message, scroll the loop, etc. Run with cmd.",
+            "srcUrl": "./download/MessageLoopEditor.zip",
+            "demoUrl": "./download/MessageLoopEditor.jar"
+        },
+        {
+            "heading": "Java: WordCloudGenerator",
+            "description": "This program takes in a txt file (an article for instance), and another txt file containing words to ignore (words like \"the\") and will generate a word cloud based on frequency of words provided",
+            "srcUrl": "./download/WordCloudGenerator.zip",
+            "demoUrl": "./download/WordCloudGenerator.jar"}
+    ]
+}

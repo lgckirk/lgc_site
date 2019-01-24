@@ -1,90 +1,24 @@
 export default (function() {
-    class ProjectsController {
-        constructor(getNavTabs) {
-            this.tabs = getNavTabs();
+    /**
+     * The project list is loaded asynchronously.
+     * Might as well register it as a constant
+     * but I just really like to do it this way.
+     */
+    let projectList = false;
 
-            this.projects = [
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-                {
-                    heading: 'heading1',
-                    detail: '<b>bold</b>'
-                },
-                {
-                    heading: 'heading2',
-                    detail: '<i>italic</b>'
-                },
-            ];
+    /**
+     * This is the page component for the projects page.
+     */
+    class ProjectsController {
+        constructor(getNavTabs, $http) {
+            this.tabs = getNavTabs();
+            this.projects = projectList;
+            if (this.projects === false) {
+                this.projects = [];
+                $http.get('./project-list.json').then(res => {
+                    projectList = this.projects = res.data.projectList;
+                });
+            }
         }
     }
 
