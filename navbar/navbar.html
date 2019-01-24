@@ -1,6 +1,11 @@
 
 <ul class="navbar">
     <li ng-repeat="stuff in $ctrl.stuffs">
-        <a href="{{stuff.href}}" target="{{stuff.target}}">{{stuff.label}}</a>
+        <a
+        href="{{stuff.href}}"
+        ng-click="stuff.onClick($event)"
+        target="{{stuff.target}}">
+            {{stuff.label}}
+        </a>
     </li>
 </ul>

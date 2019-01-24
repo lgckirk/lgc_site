@@ -17,3 +17,8 @@
 .contact-navbar {
     font-size: 15px;
 }
+
+.contact-modal-wechat img {
+    margin: auto;
+    display: block;
+}

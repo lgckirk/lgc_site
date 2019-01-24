@@ -13,3 +13,5 @@ This is main site of my personal portfolio, where I showcase my stuffs.
 * Routing needs a default page
 * Contact->WeChat and projects should have a popup
 * Remove bootstrap css as a dependency
+* WeChat QR code has expired, get a new one
+* Add Linkedin to one of the contacts

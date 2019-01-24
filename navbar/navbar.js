@@ -8,6 +8,8 @@ export default (function() {
      *      href: string
      *      label: string
      *      openNewTab: boolean True means target=_blank (optional)
+     *      onClick: function Callback to run on click. The angular
+     *          "$event" object is passed in as argument (optional).
      */
     class NavbarController {
         constructor() {}
@@ -15,11 +17,22 @@ export default (function() {
         $onInit() {
             this.stuffs = this.items.map((item) => {
                 const newDef = Object.assign({}, item);
+
+                // handle openNewTab
                 if (!item.hasOwnProperty('openNewTab')) {
                     newDef.openNewTab = false;
                 }
                 newDef.target = newDef.openNewTab ?
                     '_blank' : '_self';
+
+                // handle ng-click
+                if (item.hasOwnProperty('onClick')
+                    && typeof item.onClick !== 'function') {
+                    console.error('Navbar [component]: item onClick option must be a function.');
+                }
+                newDef.onClick = typeof newDef.onClick === 'function' ?
+                    newDef.onClick : () => {};
+
                 return newDef;
             });
         }
