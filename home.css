@@ -52,3 +52,22 @@ body {
     display: block;
     margin-top: 20px;
 }
+
+/* animation */
+.home-content.ng-enter {
+    transition: all ease 1s;
+    opacity: 0;
+}
+
+.home-content.ng-enter.ng-enter-active {
+    opacity:  1;
+}
+
+.home-content.ng-leave {
+    transition: all ease 1s;
+    opacity: 1;
+}
+
+.home-content.ng-leave.ng-leave-active {
+    opacity: 0;
+}
