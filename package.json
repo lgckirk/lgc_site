@@ -1,0 +1,23 @@
+{
+  "name": "lgc_site",
+  "version": "1.0.0",
+  "description": "Li Gaochang's personal site.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgckirk/lgc_site.git"
+  },
+  "keywords": [],
+  "author": "gaochang-li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lgckirk/lgc_site/issues"
+  },
+  "homepage": "https://github.com/lgckirk/lgc_site#readme",
+  "devDependencies": {
+    "webpack": "^4.30.0"
+  }
+}
