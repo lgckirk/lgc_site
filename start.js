@@ -5,8 +5,6 @@ import contact from './contact/contact.js';
 import projects from './projects/projects.js';
 import navTabService from './navTabService/navTabService.js';
 
-(function() {
-
 /**
  * This array registers "pages" of the site.
  * A "page" is represented by a component with the same
@@ -35,5 +33,3 @@ angular.module('lgcSite')
 
 // let's go
 angular.bootstrap(document, ['lgcSite']);
-
-})();

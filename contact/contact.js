@@ -1,5 +1,3 @@
-export default (function() {
-
 /**
  * This component is just a static page for the contact page.
  */
@@ -37,9 +35,7 @@ class ContactController {
     }
 }
 
-return {
+export default {
     controller: ContactController,
     templateUrl: './contact/contact.html'
 };
-
-})();

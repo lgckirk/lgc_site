@@ -1,6 +1,3 @@
-
-export default (function() {
-
 /**
  * A slider is a content container with 2 windows.
  * The left and right windows slide to their respected
@@ -72,7 +69,7 @@ class SliderController {
     }
 }
 
-return {
+export default {
     transclude: {
         'left': 'sliderLeft',
         'right': 'sliderRight'
@@ -84,5 +81,3 @@ return {
         onClose: '<'
     }
 };
-
-})();
